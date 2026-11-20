@@ -81,7 +81,7 @@ The following table lists the configurable parameters of the PostgreSQL chart an
 | ------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | `image.registry`         | PostgreSQL image registry                                                                              | `docker.io`                                                                      |
 | `image.repository`       | PostgreSQL image repository                                                                            | `postgres`                                                                       |
-| `image.tag`              | PostgreSQL image tag (immutable tags are recommended)                                                  | `"18.3@sha256:69e8582b781cb44fa4557b98ed586fe68361e320d9b12f9707494335634f4f3d"` |
+| `image.tag`              | PostgreSQL image tag (immutable tags are recommended)                                                  | `"19.0@sha256:bb6e70add742cd868fb62cb3b2f67d1dd2bdd2b65a521e778420748753687c60"` |
 | `image.imagePullPolicy`  | PostgreSQL image pull policy                                                                           | `Always`                                                                         |
 | `image.useHardenedImage` | Set to `true` when using hardened images (e.g., DHI) that have different PGDATA paths for Postgres <18 | `false`                                                                          |
 
