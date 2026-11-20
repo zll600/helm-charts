@@ -140,3 +140,15 @@ tests:
       - equal:
           path: spec.template.spec.containers[0].volumeMounts[0].mountPath
           value: /var/lib/postgresql
+
+  - it: should default to PostgreSQL 19 and its storage layout
+    asserts:
+      - matchRegex:
+          path: spec.template.spec.containers[0].image
+          pattern: "^docker[.]io/postgres:19[.][0-9]+@sha256:[a-f0-9]{64}$"
+      - equal:
+          path: spec.template.spec.containers[0].env[?(@.name=="PGDATA")].value
+          value: /var/lib/postgresql/19/docker
+      - equal:
+          path: spec.template.spec.containers[0].volumeMounts[0].mountPath
+          value: /var/lib/postgresql
